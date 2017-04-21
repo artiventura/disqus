@@ -1,3 +1,6 @@
+<style>
+#disqus_thread a{color: #e64c65;}
+</style>
 <div id="disqus_thread"></div>
 <script>
 window.addEventListener('message', receiveMessage, false);
@@ -12,7 +15,6 @@ function receiveMessage(event)
         }
         if (!msg)
             return false;
-
         if (msg.name === 'resize') {
             window.parent.postMessage({
               sentinel: 'amp',
@@ -25,19 +27,16 @@ function receiveMessage(event)
 </script>
 <script>
     /**
-     * Todos los derechos reservados
-     * VARIABLES DE CONFIGURACIÓN RECOMENDADAS: EDITE Y COMUNICE LA SECCIÓN ABAJO PARA INSERTAR VALORES DINÁMICOS DE SU PLATAFORMA O CMS.
-     * APRENDA POR QUÉ ES IMPORTANTE LA DEFINICIÓN DE ESTAS VARIABLES: https://disqus.com/admin/universalcode/#configuration-variables
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
      */
     var disqus_config = function () {
-        this.page.url = window.location;  // Reemplazar PAGE_URL con la variable de URL canónica de la página
-        this.page.identifier = window.location.hash; // // Reemplazar PAGE_IDENTIFIER con la variable de identificador único de su página
+        this.page.url = window.location;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = window.location.hash; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
-    (function() {  // NO EDITE POR DEBAJO DE ESTA LÍNEA
+    (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-
-        s.src = '//EXAMPLE.disqus.com/embed.js';
-
+        s.src = '//apuntesdeerick.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
